@@ -1,1 +1,54 @@
+.body{
+    background-color: mintcream;
+}
 
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    background-color: lightcyan;
+    text-align: center;
+}
+
+.propuestas{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 1.2em;
+    border-radius: 40px;
+    background-color: antiquewhite;
+}
+
+ul{
+    list-style: none;
+    
+}
+
+li{
+    padding: 5px;
+    font-weight: 400;
+}
+
+p{
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+button{
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 1.8em;
+    padding: 0.6em;
+}
