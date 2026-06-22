@@ -70,15 +70,25 @@
        margin-bottom: 8px;
    }
 
+   .propuesta-card:hover{
+         transform: translateY(-4px);
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+   }
+
    .footer {
        display: flex;
        justify-content: space-around;
        background: #1a1a1a;
        color: #ccc;
+       font: bold 18px sans-serif;
        padding: 20px;
        margin-top: 60px;
-       font-size: 14px;
    }
+
+.footer .a-footer{
+    color: 1e40af;
+    font-size: none;
+}
 
    body {
        display: flex;

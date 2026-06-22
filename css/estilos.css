@@ -39,10 +39,6 @@ li {
 }
 
 
-p {
-    font-size: x-large;
-    font-family: sans-serif;
-}
 
 
 h1 {
@@ -68,17 +64,6 @@ button {
     padding: 0.6em;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 24px;
-    margin: 0;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    font-family: system-ui, sans-serif;
-}
-
 .btn {
     color: white;
     text-decoration: none;
@@ -91,23 +76,4 @@ button {
 .btn:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-}
-
-.footer {
-    display: flex;
-    justify-content: space-around;
-    background: #1a1a1a;
-    color: #ccc;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 14px;
-}
-
-.footer p {
-    margin: 0;
-}
-
-.footer p:hover {
-    color: #fff;
-    transition: 0.3s;
 }
