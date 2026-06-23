@@ -1,79 +1,134 @@
-
-.body {
-    background-color: mintcream;
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --amarillo: #ffd556;
+  --azul: #aaddff;
+  --rojo: #ff7d7d;
+  --texto: #3D3D3D;
+  --fondo-general: #F9F9F9;
 }
 
+/* ===== FONDO GENERAL ===== */
+body {
+  background-color: var(--fondo-general);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== NAVBAR CON DEGRADADO ===== */
+.navbar {
+  background: linear-gradient(to right, var(--amarillo), var(--azul), var(--rojo));
+  padding: 15px 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 0 0 12px 12px;
+}
+
+.navbar a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
-
-    margin: 0 auto;
-    margin-top: 5em;
-    min-height: 100vh;
-    padding: 20px;
-    max-width: 1200px;
-    border-radius: 20px;
-    background-color: white;
-
-    text-align: center;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
-
-
-.propuestas {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 1.2em;
-    border-radius: 40px;
-    background: #f5f7fa;
-}
-
-
-ul {
-    list-style: none;
-
-
-}
-
-
-li {
-    padding: 5px;
-    font-weight: 400;
-}
-
-
-
 
 h1 {
-    font-family: fantasy;
-    font-weight: bold;
-    color: #1e40af;
+  text-align: center;
+  color: var(--texto);
+  font-size: 2.2rem;
 }
 
-
-h2 {
-    font-weight: bolder;
-    font-family: cursive;
+.inf h2 {
+  text-align: center;
+  font-style: italic;
+  color: var(--texto);
 }
 
+/* ===== CARDS (about y propuestas) ===== */
+.about,
+.propuestas {
+  background-color: var(--azul);  /* azul pastel para about */
+  border-radius: 16px;
+  padding: 20px 25px;
+  margin: 25px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
 
+.propuestas {
+  background-color: var(--amarillo); /* amarillo pastel para propuestas */
+}
+
+/* ===== IMAGEN ===== */
+.img {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#img {
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BOTÓN ===== */
 button {
-    background-color: darkred;
-    color: white;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: bold;
-    margin: 1.8em;
-    padding: 0.6em;
+  background-color: var(--azul);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  color: var(--texto);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: block;
+  margin: 20px auto;
 }
 
-.btn {
-    color: white;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.25s ease;
+button:hover {
+  background-color: #b3d4e8; /* un poco más oscuro */
+  transform: scale(1.03);
 }
 
-.btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--rojo);
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  margin-top: 40px;
+  color: var(--texto);
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+.footer .a-footer {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer .a-footer:hover {
+  color: #4a4a4a;
 }

@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos_p.css">
-    <title>Propuestas</title>
-</head>
-<body>
-    
-    <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Propuestas - Iván Uribe Valencia De La Espriella 2026</title>
-  
+  <link rel="stylesheet" href="./css/estilos_p.css">
+  <title>Propuestas</title>
 </head>
+
 <body>
 
-  <nav class="navbar">
-    <a href="./index.html">Inicio</a>
-    <a href="./about.html">Sobre mí</a>
-    <a href="#">Contacto</a>
-  </nav>
+  <!DOCTYPE html>
+  <!DOCTYPE html>
+  <html lang="es">
 
-  <main>
-    <section class="hero">
-      <h1>Iván Uribe Valencia De La Espriella</h1>
-      <p>Por una ciudad más justa, segura y moderna</p>
-    </section>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas - Iván Uribe Valencia De La Espriella 2026</title>
 
-    <div class="propuestas">
-      <h2>Mis Propuestas</h2>
-      
-      <div class="propuesta-card">
-        <h3>1. Transporte Público Eficiente</h3>
-        <p>Ampliación de rutas de autobús 24/7 y tarifas reducidas para estudiantes y adultos mayores. Menos tráfico, más movilidad.</p>
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <a href="./index.html">Inicio</a>
+      <a href="./about.html">Sobre mí</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <div class="carrusel-container">
+      <div class="carrusel-slider" id="carruselSlider">
+        <div class="carrusel-slide">
+          <img src="./img/cerro-de-monserrate.jpg" alt="Imagen 1">
+        </div>
+        <div class="carrusel-slide">
+          <img src="./img/desierto-de-la-tatacoa.jpg" alt="Imagen 2">
+        </div>
+        <div class="carrusel-slide">
+          <img src="./img/piedra-del-penol.jpg" alt="Imagen 3">
+        </div>
+        <div class="carrusel-slide">
+          <img src="./img/parque-naciona-natural-purace.jpg" alt="Imagen 4">
+        </div>
+        <div class="carrusel-slide">
+          <img src="./img/laguna-de-guatavita.jpg" alt="Imagen 4">
+        </div>
       </div>
 
-      <div class="propuesta-card">
-        <h3>2. Seguridad Comunitaria</h3>
-        <p>Más iluminación en barrios, cámaras en puntos críticos y policía de proximidad. Recuperemos la tranquilidad en las calles.</p>
-      </div>
-
-      <div class="propuesta-card">
-        <h3>3. Educación y Empleo Joven</h3>
-        <p>Becas técnicas gratuitas y convenios con empresas locales para prácticas pagadas. El talento joven no se va más.</p>
-      </div>
+      <button class="carrusel-btn prev" id="prevBtn">❮</button>
+      <button class="carrusel-btn next" id="nextBtn">❯</button>
+      <div class="carrusel-indicadores" id="indicadores"></div>
     </div>
-  </main>
+
+    <main>
+      <section class="hero">
+        <h1>Iván Uribe Valencia De La Espriella</h1>
+        <p>Por una ciudad más justa, segura y moderna</p>
+      </section>
+
+      <div class="container-propuestas">
+        <h2>Mis Propuestas</h2>
+
+        <div class="propuesta-card">
+          <h3>1. Transporte Público Eficiente</h3>
+          <p>Ampliación de rutas de autobús 24/7 y tarifas reducidas para estudiantes y adultos mayores. Menos tráfico,
+            más movilidad.</p>
+        </div>
+
+        <div class="propuesta-card">
+          <h3>2. Seguridad Comunitaria</h3>
+          <p>Más iluminación en barrios, cámaras en puntos críticos y policía de proximidad. Recuperemos la tranquilidad
+            en las calles.</p>
+        </div>
+
+        <div class="propuesta-card">
+          <h3>3. Educación y Empleo Joven</h3>
+          <p>Becas técnicas gratuitas y convenios con empresas locales para prácticas pagadas. El talento joven no se va
+            más.</p>
+        </div>
+      </div>
+    </main>
 
     <div class="footer">
-        <p>Copyright © 2026 Iván Uribe Valencia De La Espriella</p>
-        <p>Hecho con pasión por Iván Uribe Valencia De La Espriella</p>
-        <p>Visita mi <a href="https://github.com/Milotinto0/landing-campana/tree/main">Github</a></p>
+      <p>Copyright © 2026 Iván Uribe Valencia De La Espriella</p>
+      <p>Hecho con pasión por Iván Uribe Valencia De La Espriella</p>
+      <p>Visita mi <a href="https://github.com/Milotinto0/landing-campana/tree/main" class="a-footer">Github</a></p>
     </div>
 
-</body>
-</html>
+  </body>
+  <script src="./js/script.js" defer></script>
+  </html>

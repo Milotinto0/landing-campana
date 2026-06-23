@@ -1,101 +1,240 @@
-   body {
-       font-family: system-ui, sans-serif;
-       background: #f5f7fa;
-       color: #333;
-       line-height: 1.6;
-   }
-
-   .navbar {
-       display: flex;
-       justify-content: center;
-       gap: 20px;
-       padding: 16px;
-       background: linear-gradient(90deg, #667eea, #764ba2);
-       color: white;
-   }
-
-   .navbar a {
-       color: white;
-       text-decoration: none;
-       font-weight: 500;
-       padding: 8px 16px;
-       border-radius: 6px;
-       transition: 0.2s;
-   }
-
-   .navbar a:hover {
-       background: rgba(255, 255, 255, 0.2);
-   }
-
-   .hero {
-       text-align: center;
-       padding: 60px 20px;
-       background: white;
-   }
-
-   .hero h1 {
-       font-size: 2.5rem;
-       color: #1e40af;
-       margin-bottom: 10px;
-   }
-
-   .hero p {
-       font-size: 1.1rem;
-       color: #555;
-   }
-
-   .propuestas {
-       max-width: 900px;
-       margin: 40px auto;
-       padding: 0 20px;
-   }
-
-   .propuestas h2 {
-       text-align: center;
-       font-size: 2rem;
-       margin-bottom: 30px;
-       color: #1e40af;
-   }
-
-   .propuesta-card {
-       background: white;
-       padding: 24px;
-       margin-bottom: 20px;
-       border-radius: 12px;
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-   }
-
-   .propuesta-card h3 {
-       color: #1e40af;
-       margin-bottom: 8px;
-   }
-
-   .propuesta-card:hover{
-         transform: translateY(-4px);
-         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-   }
-
-   .footer {
-       display: flex;
-       justify-content: space-around;
-       background: #1a1a1a;
-       color: #ccc;
-       font: bold 18px sans-serif;
-       padding: 20px;
-       margin-top: 60px;
-   }
-
-.footer .a-footer{
-    color: 1e40af;
-    font-size: none;
+/* ===== VARIABLES GLOBALES (heredadas de estilos.css) ===== */
+:root {
+  --amarillo: #ffd556;
+  --azul: #aaddff;
+  --rojo: #ff7d7d;
+  --texto: #3D3D3D;
+  --fondo-general: #F9F9F9;
 }
 
-   body {
-       display: flex;
-       flex-direction: column;
-       min-height: 100vh;
-   }
+/* ===== RESET Y FONDO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-   main {
-       flex: 1;
-   }
+body {
+  background-color: var(--fondo-general);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: linear-gradient(to right, var(--amarillo), var(--azul), var(--rojo));
+  padding: 15px 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 0 0 12px 12px;
+}
+
+.navbar a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* ===== HERO / TÍTULO ===== */
+.hero {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: white;
+  margin: 0 0 20px 0;
+  border-radius: 0 0 16px 16px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: var(--texto);
+  margin-bottom: 6px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ===== CONTENEDOR DE PROPUESTAS ===== */
+.container-propuestas {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.container-propuestas h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0 25px;
+  color: var(--texto);
+  border-bottom: 3px solid var(--azul);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* ===== CARDS DE PROPUESTAS ===== */
+.propuesta-card {
+  background-color: white;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid var(--azul);   /* detalle con azul pastel */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.propuesta-card:nth-child(2) {
+  border-left-color: var(--amarillo);   /* segunda card con amarillo */
+}
+
+.propuesta-card:nth-child(3) {
+  border-left-color: var(--rojo);       /* tercera card con rojo */
+}
+
+.propuesta-card h3 {
+  color: var(--texto);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.propuesta-card p {
+  color: #444;
+  margin: 0;
+}
+
+.propuesta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--rojo);
+  padding: 25px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  margin-top: auto;
+  color: var(--texto);
+}
+
+.footer p {
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.footer .a-footer {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer .a-footer:hover {
+  color: #4a4a4a;
+}
+
+.carrusel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.carrusel-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carrusel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carrusel-indicadores {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carrusel-indicadores .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carrusel-indicadores .dot.active {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .carrusel-slide img {
+    height: 250px;
+  }
+  .carrusel-btn {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+  }
+}
