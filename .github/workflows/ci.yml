@@ -1,0 +1,29 @@
+name: Validacion Landing campana
+
+on:
+  push:
+    branches:
+      - main
+      
+  pull_request:
+    branches:
+      - main
+jobs:
+  validar-archivos:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Verificar index.html
+      run: test -f index.html
+      
+    - name: Verificar script.js
+      run: test -f js/script.js
+
+    - name: Verificar estilos.css
+      run: test -f css/estilos.css
+
+    - name: Verificar estilos_p.css
+      run: test -f css/estilos_p.css
+
+    - name: Verificar archivo README.md
+      run: test -f README.md
